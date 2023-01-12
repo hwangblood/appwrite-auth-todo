@@ -5,6 +5,7 @@ const client = new sdk.Client();
 
 const databases = new sdk.Databases(client);
 
+// TODO Change to your own
 const projectID = "63bf9980f0ba88ebca7d";
 const apiEndpoint = "https://52a81f61.r2.cpolar.top/v1";
 const apiKeySecret =
