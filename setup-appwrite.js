@@ -1,15 +1,14 @@
 const sdk = require("node-appwrite");
+require("dotenv").config();
 
 // Init SDK
 const client = new sdk.Client();
 
 const databases = new sdk.Databases(client);
-
-// TODO Change to your own
-const projectID = "63bf9980f0ba88ebca7d";
-const apiEndpoint = "https://52a81f61.r2.cpolar.top/v1";
-const apiKeySecret =
-  "b30aff29b78408dc598041aea08b5b818b224e35c3153bf9e857f2fa57388ba0f06f92607f9cc3c1d89264515ed1e11e7d486a2b782869bfb71279bf5b0698bddb06c5662511c5cd89006d6a8637c5648f09e8a4e4f05dac7a054f0baed015ce06eaac707a813e7d3c5250d400d6d4dbfd121bac2446f6644828d116335ae285";
+console.log(process.env);
+const projectID = process.env.REACT_APP_PROJECT_ID;
+const apiEndpoint = process.env.REACT_APP_API_ENDPOINT;
+const apiKeySecret = process.env.REACT_APP_API_KEY_SECRET;
 
 client
   .setEndpoint(apiEndpoint) // Your API Endpoint
@@ -100,4 +99,4 @@ async function setup() {
     );
 }
 
-setup();
+// setup();

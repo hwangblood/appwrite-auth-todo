@@ -54,9 +54,7 @@ function Home() {
               </button>
             </div>
           </div>
-          {/* TODO FORM */}
           <TodoForm />
-          {/* TODOS BOX */}
           <Todos />
         </>
       ) : (
