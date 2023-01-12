@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { account, databases } from "../appwrite/appwriteConfig";
+import { account } from "../appwrite/appwriteConfig";
 
 function Signup() {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ function Signup() {
     promise.then(
       function (response) {
         console.log(response); // Success
-        navigate("/profile");
+        navigate("/"); // go to login
       },
       function (error) {
         console.log(error); // Failure
