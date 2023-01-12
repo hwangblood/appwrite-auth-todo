@@ -1,4 +1,4 @@
-import { Client, Account, Databases, ID } from "appwrite";
+import { Client, Account, Databases } from "appwrite";
 
 // TODO Change to your own
 const projectID = "63bf9980f0ba88ebca7d";
