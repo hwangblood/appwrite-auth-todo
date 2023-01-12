@@ -83,23 +83,21 @@ async function setup() {
       }
     );
 
-  for (let i = 1; i <= 10; i++) {
-    await databases
-      .createDocument(database.$id, collection.$id, sdk.ID.unique(), {
-        name: `todo ${i}`,
-      })
-      .then(
-        function (response) {
-          console.log(
-            `Created Document '${response.name}' with id '${response.$id}'`
-          );
-          return response;
-        },
-        function (error) {
-          console.log(error);
-        }
-      );
-  }
+  await databases
+    .createDocument(database.$id, collection.$id, sdk.ID.unique(), {
+      name: `Hello Appwrite!`,
+    })
+    .then(
+      function (response) {
+        console.log(
+          `Created Document '${response.name}' with id '${response.$id}'`
+        );
+        return response;
+      },
+      function (error) {
+        console.log(error);
+      }
+    );
 }
 
 setup();
