@@ -5,7 +5,7 @@ import { account } from "../appwrite/appwriteConfig";
 import TodoForm from "./TodoForm";
 import Todos from "./Todos";
 
-function Profile() {
+function Home() {
   const navigate = useNavigate();
   const [profile, setProfile] = useState(null);
 
@@ -73,4 +73,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Home;
